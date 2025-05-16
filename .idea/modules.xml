@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Almacen/Almacen.iml" filepath="$PROJECT_DIR$/Almacen/Almacen.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ArbolAVL/ArbolAVL.iml" filepath="$PROJECT_DIR$/ArbolAVL/ArbolAVL.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ArbolBB/ArbolBB.iml" filepath="$PROJECT_DIR$/ArbolBB/ArbolBB.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Conjuntos/Conjuntos.iml" filepath="$PROJECT_DIR$/Conjuntos/Conjuntos.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Extras/Extras.iml" filepath="$PROJECT_DIR$/Extras/Extras.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Lista/Lista.iml" filepath="$PROJECT_DIR$/Lista/Lista.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TADS-definitivos.iml" filepath="$PROJECT_DIR$/TADS-definitivos.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Trie/Trie.iml" filepath="$PROJECT_DIR$/Trie/Trie.iml" />
+    </modules>
+  </component>
+</project>
