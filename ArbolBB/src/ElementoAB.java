@@ -264,4 +264,25 @@ public class ElementoAB<T> implements IElementoAB<T> {
         }
         return izqOk && derOk;
     }
+
+    public boolean obtenerCamino(Comparable unaEtiqueta, LinkedList<Comparable> camino) {
+        if (this.etiqueta.compareTo(unaEtiqueta) == 0) {
+            camino.add(this.etiqueta);
+            return true;
+        }
+
+        boolean encontrado = false;
+        if (hijoIzq != null) {
+            encontrado = hijoIzq.obtenerCamino(unaEtiqueta, camino);
+        }
+        if (!encontrado && hijoDer != null) {
+            encontrado = hijoDer.obtenerCamino(unaEtiqueta, camino);
+        }
+
+        if (encontrado) {
+            camino.addFirst(this.etiqueta);
+            return true;
+        }
+        return false;
+    }
 }

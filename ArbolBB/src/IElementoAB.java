@@ -114,4 +114,6 @@ public interface IElementoAB<T> {
     public int cantidadNodosPorNivel(int nivel);
     public void listarHojasConNivel(int nivel, List<String> lista);
     public boolean esDeBusqueda();
+
+    boolean obtenerCamino(Comparable unaEtiqueta, LinkedList<Comparable> camino);
 }

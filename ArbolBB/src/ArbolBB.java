@@ -145,5 +145,54 @@ public class ArbolBB<T> implements IArbolBB<T> {
     public boolean esDeBusqueda() {
         return (raiz == null) || raiz.esDeBusqueda();
     }
-    
+
+    public List<Comparable> obtenerCamino(Comparable unaEtiqueta) {
+        LinkedList<Comparable> camino = new LinkedList<>();
+        if (raiz != null) {
+            boolean encontrado = raiz.obtenerCamino(unaEtiqueta, camino);
+            if (encontrado) {
+                return camino;
+            }
+        }
+        return null;
+    }
+
+    public List<Comparable> obtenerCaminoEntre(Comparable desde, Comparable hasta) {
+        if (raiz == null) {
+            return null;
+        }
+        List<Comparable> camino = new LinkedList<>();
+
+        if (raiz.buscar(desde) == null) {
+            return camino;
+        }
+
+        if (raiz.buscar(hasta) == null ) {
+            return camino;
+        }
+
+        LinkedList<Comparable> caminoDesdeRaizA = new LinkedList<>();
+        LinkedList<Comparable> caminoDesdeRaizB = new LinkedList<>();
+
+        if (!raiz.obtenerCamino(desde, caminoDesdeRaizA) || !raiz.obtenerCamino(hasta, caminoDesdeRaizB)) {
+            return camino;
+        }
+
+        int i = 0;
+        while (i < caminoDesdeRaizA.size() && i < caminoDesdeRaizB.size() &&
+                caminoDesdeRaizA.get(i).equals(caminoDesdeRaizB.get(i))) {
+            i++;
+        }
+
+
+        for (int j = caminoDesdeRaizA.size() - 1; j >= i; j--) {
+            camino.add(caminoDesdeRaizA.get(j));
+        }
+
+        for (int j = i - 1; j < caminoDesdeRaizB.size(); j++) {
+            camino.add(caminoDesdeRaizB.get(j));
+        }
+        return camino;
+    }
+
 }
